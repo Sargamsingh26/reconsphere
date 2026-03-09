@@ -13,7 +13,7 @@ export default function HomePage() {
   const [hasTyped, setHasTyped] = useState(false);
   const searchWrapperRef = useRef(null);
 
-  const API = "http://127.0.0.1:8000";
+  const API = "https://reconsphere.onrender.com";
 
   const handleAnalyzeStart = async (domain, selectedTools) => {
     setIsLoading(true);
