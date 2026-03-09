@@ -13,9 +13,23 @@ export default function HomePage() {
   const [hasTyped, setHasTyped] = useState(false);
   const searchWrapperRef = useRef(null);
 
+  // Backend API
   const API = "https://reconsphere.onrender.com";
 
+  // Domain validation function
+  const isValidDomain = (domain) => {
+    const domainRegex = /^(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
+    return domainRegex.test(domain);
+  };
+
   const handleAnalyzeStart = async (domain, selectedTools) => {
+
+    // Validate domain before calling backend
+    if (!isValidDomain(domain)) {
+      alert("Please enter a valid domain (example: google.com)");
+      return;
+    }
+
     setIsLoading(true);
     setAnalysisComplete(false);
 
@@ -42,9 +56,11 @@ export default function HomePage() {
 
   const handleDownload = () => {
     if (!reportData) return;
+
     const file = new Blob([JSON.stringify(reportData, null, 2)], {
       type: "application/json",
     });
+
     const element = document.createElement("a");
     element.href = URL.createObjectURL(file);
     element.download = "reconsphere-report.json";
