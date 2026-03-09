@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 249 250;
+    --foreground: 26 26 46;
+
+    --card: 255 255 255;
+    --card-foreground: 26 26 46;
+
+    --secondary: 240 240 240;
+    --muted: 212 212 216;
+    --muted-foreground: 102 102 102;
+
+    --accent: 0 217 255;
+    --accent-foreground: 26 26 46;
+
+    --border: 229 229 231;
+    --ring: 0 217 255;
+
+    --neon-cyan: 0 217 255;
+    --neon-electric-blue: 0 102 255;
+    --neon-purple: 168 85 247;
+    --neon-teal: 20 184 166;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 10 10 15;
+    --foreground: 245 245 245;
+
+    --card: 22 22 30;
+    --card-foreground: 245 245 245;
+
+    --secondary: 39 39 46;
+    --muted: 63 63 71;
+    --muted-foreground: 161 161 161;
+
+    --accent: 0 217 255;
+    --accent-foreground: 10 10 15;
+
+    --border: 39 39 46;
+    --ring: 0 217 255;
+  }
+
+  * {
+    @apply border-border focus-visible:ring-2 focus-visible:ring-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Scrollbar */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thumb-border {
+    scrollbar-color: rgb(var(--border)) transparent;
+  }
+}
+.logo-wrapper {
+  perspective: 1000px;
+  height: 32px;        /* same height as before */
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  transform: scale(1.5);   /* makes logo bigger without changing navbar height */
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-logo {
+  transform: scale(1.5) rotateX(180deg);
+}

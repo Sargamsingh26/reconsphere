@@ -1,0 +1,58 @@
+#How to Run the CLI version After Downloading the ZIP
+
+#Open the Project Folder in Terminal
+Open-Command Prompt / Terminal.
+Type the following command to navigate to the project directory:
+cd Cli version
+
+#Install Python Dependencies
+once you are in the project directory, run the following command to install the required Python libraries:
+pip install requests python-dotenv
+
+#Add API Keys in `.env`
+Inside `.env` add:
+WHOIS_API_KEY=your_key_here
+VIEWDNS_API_KEY=your_key_here
+SECURITYTRAILS_API_KEY=your_key_here
+GENELIFY_API_KEY=your_key_here
+
+#Run the CLI Tool
+Run the script:
+python main.py
+
+# What the User Will See
+Terminal output:
+
+==============================================
+ ReconSphere CLI : Automated Domain Intelligence Suite
+==============================================
+
+Available Tools:
+
+1. WHOIS Information
+2. WHOIS History
+3. Website Category
+4. Top-Level Domain Analysis
+5. Technology Stack Detection
+6. Subdomain Enumeration (Single Domain)
+7. SSL Certificate Analysis
+8. Spam / Blacklist Check
+9. Robots.txt Analysis
+10. Open Ports & Services Scan
+11. Server Geolocation
+12. Domain Reputation Check
+13. DNS Records Lookup
+14. Website Full-Page Screenshot
+15. Historical IP Lookup
+16. Subdomain Enumeration (All TLD Variants)
+
+A. Run ALL Tools
+Q. Quit
+```
+
+Then user enters:
+Enter domain: google.com
+Example tool selection:
+1,4,6
+or
+A
