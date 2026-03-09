@@ -46,8 +46,9 @@ export default function DownloadPage() {
                 Access the source code of ReconShpere and contribute to the project
               </p>
               <a
-                href="/downloads/reconsphere-blackbook.pdf"   // 🔁 Put your actual file path here
-                download
+                 href="https://github.com/Sargamsingh26/reconsphere"
+                 target="_blank"
+                 rel="noopener noreferrer"
                 className="w-full block text-center px-4 py-2 rounded-lg border border-border bg-card hover:border-accent/50 text-foreground font-medium transition-all">
                  View on GitHub
               </a>
@@ -101,11 +102,11 @@ export default function DownloadPage() {
                 </h3>
                 <div className="bg-secondary/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                   <div className="text-foreground/70">
-                    <p>$ wget https://releases.reconsphere.io/latest</p>
-                    <p>$ unzip reconsphere-latest.zip</p>
-                    <p>$ cd reconsphere</p>
-                    <p>$ ./install.sh</p>
-                    <p>$ reconsphere --start</p>
+                    <p>$ Download CLI from the button above.</p>
+                    <p>$ unzip reconsphere-cli.zip</p>
+                    <p>$ cd CLI version</p>
+                    <p>$ pip install requests python-dotenv</p>
+                    <p>$ python main.py</p>
                   </div>
                 </div>
               </div>
